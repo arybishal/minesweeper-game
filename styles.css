@@ -1,0 +1,151 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e5e7eb;
+    margin: 0;
+    padding: 15px;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.game-container {
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+}
+
+h1 {
+    font-size: 2.2rem;
+    margin: 12px 0;
+    color: #1f2937;
+}
+
+.controls {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.board {
+    display: inline-block;
+    background-color: #9ca3af;
+    padding: 6px;
+    border: 3px inset #d1d5db;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+.cell {
+    width: 35px;
+    height: 35px;
+    background-color: #9ca3af;
+    border: 2px outset #d1d5db;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    cursor: pointer;
+    user-select: none;
+    box-sizing: border-box;
+}
+
+.cell:hover:not(.revealed):not(.flagged) {
+    background-color: #b9c2d0;
+}
+
+.cell.revealed {
+    border: 1px solid #4b5563;
+    background-color: #d1d5db;
+}
+
+.cell.mine {
+    background-color: #ef4444;
+}
+
+.cell.flagged {
+    background-color: #facc15;
+}
+
+select, button, .home-button {
+    padding: 8px;
+    margin: 5px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid #4b5563;
+    background-color: #f3f4f6;
+}
+
+button:hover, .home-button:hover {
+    background-color: #e5e7eb;
+}
+
+select:focus, button:focus, .home-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #3b82f6;
+}
+
+#status {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #1f2937;
+}
+
+@media screen and (max-width: 600px) {
+    .game-container {
+        max-width: 100%;
+        padding: 0 8px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .cell {
+        width: calc(92vw / 10);
+        height: calc(92vw / 10);
+        min-width: 30px;
+        min-height: 30px;
+        font-size: calc(92vw / 20);
+    }
+
+    select, button, .home-button {
+        padding: 6px;
+        font-size: 13px;
+    }
+
+    .board {
+        padding: 4px;
+        border: 2px inset #d1d5db;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .cell {
+        width: calc(92vw / 9);
+        height: calc(92vw / 9);
+        min-width: 32px;
+        min-height: 32px;
+        font-size: calc(92vw / 18);
+    }
+
+    select, button, .home-button {
+        width: 32%;
+        font-size: 12px;
+        margin: 3px;
+    }
+}
