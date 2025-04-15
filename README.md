@@ -1,7 +1,7 @@
 Minesweeper Game
 Minesweeper is a classic single-player puzzle game where you uncover cells on a grid to reveal numbers or avoid hidden mines. Built with HTML, CSS, and JavaScript, this version offers a modern, responsive design playable on both desktop and mobile devices. The first click is always safe, ensuring a fair start, and multiple difficulty levels provide challenges for all skill levels.
 Live Demo
-Play the game now: https://arybishal.github.io/minesweeper-game/home.html
+Play the game now: [https://arybishal.github.io/minesweeper-game/home.html](https://arybishal.github.io/minesweeper-game/)
 Note: Replace YourUsername above with your GitHub username after setting up the repository.
 Features
 
